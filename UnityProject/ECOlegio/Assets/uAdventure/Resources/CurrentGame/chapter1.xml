@@ -1,0 +1,3625 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE eAdventure PUBLIC "SYSTEM" "eadventure.dtd">
+<eAdventure version="1">
+  <player>
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </player>
+  <character id="ProfVidrio">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/profVidrio.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#007418" bubbleBorderColor="#00320A">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition />
+          <trigger-conversation idTarget="ProfVidrioDialogo1" />
+          <condition />
+          <activate flag="profVidrioDialogo1Fin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
+          <condition />
+        </effect>
+      </talk-to>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+          <inactive flag="profVidrioDialogo2Fin" />
+        </condition>
+        <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition />
+          <trigger-conversation idTarget="ProfVidrioDialogo2" />
+          <condition />
+          <activate flag="profVidrioDialogo2Fin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="ProfOrganico">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/profOrganico.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#8C4800" bubbleBorderColor="#452300">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition />
+          <trigger-conversation idTarget="ProfOrganicoDialogo2" />
+          <condition />
+          <activate flag="conversacionInactiva" />
+          <condition>
+            <active flag="finTutorial" />
+          </condition>
+          <activate flag="profOrganicoDialogo2Fin" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="ProfPlastico">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/profPlastico.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#D3AA00" bubbleBorderColor="#7B6300">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition />
+          <trigger-conversation idTarget="ProfPlasticoDialogo2" />
+          <condition />
+          <activate flag="profPlasticoDialogo2Fin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="ProfPapel">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/profPapel.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#0090A5" bubbleBorderColor="#003E47">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition />
+          <trigger-conversation idTarget="ProfPapelDialogo2" />
+          <condition />
+          <activate flag="profPapelDialogo2Fin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="ContenedorAmarillo">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Amarillo.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFBD00" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="ContenedorVerde">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Verde.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#009008" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="ContenedorAzul">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Azul.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#82AEFD" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="ContenedorMarron">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Marron.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#9D4E37" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </character>
+  <character id="ChicaPatio">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Chica1.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#547B76" bubbleBorderColor="#2E5049">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="eventoPatioFin" />
+        </condition>
+        <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition />
+          <trigger-conversation idTarget="PatioDialogo" />
+          <condition />
+          <activate flag="eventoPatioFin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="ChicoCafeteria">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Chico1.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#547B76" bubbleBorderColor="#2E5049">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="eventoCafeteriaFin" />
+        </condition>
+        <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition />
+          <trigger-conversation idTarget="ChicoCafeteriaDialogo" />
+          <condition />
+          <activate flag="eventoCafeteriaFin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="ChicoPasillo">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Chico2.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#547B76" bubbleBorderColor="#2E5049">
+      <frontcolor color="#FFA116" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="eventoPasilloFin" />
+        </condition>
+        <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition />
+          <trigger-conversation idTarget="PasilloDialogo" />
+          <condition />
+          <activate flag="eventoPasilloFin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <character id="ChicaPasillo">
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/animation/Chica2.eaa.xml" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="yes" bubbleBkgColor="#547B76" bubbleBorderColor="#2E5049">
+      <frontcolor color="#B100FF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+    <actions>
+      <talk-to needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <inactive flag="eventoPasilloFin" />
+        </condition>
+        <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition />
+          <trigger-conversation idTarget="PasilloDialogo" />
+          <condition />
+          <activate flag="eventoPasilloFin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
+          <condition />
+        </effect>
+      </talk-to>
+    </actions>
+  </character>
+  <scene id="ClaseOrgánico" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/cole-aula.png" />
+      <asset type="foreground" uri="" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1798" y="157" width="136" height="527" hasInfluenceArea="no" idTarget="PasilloPlanta2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="3" transitionTime="750" not-effects="yes">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition>
+            <inactive flag="finTutorial" />
+          </condition>
+          <trigger-cutscene idTarget="FinTutorial" />
+          <condition>
+            <inactive flag="finTutorial" />
+          </condition>
+          <play-sound uri="assets/audio/abrirPuerta.mp3" />
+          <condition />
+        </effect>
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 2</show-text>
+          <condition />
+        </post-effect>
+        <not-effect>
+          <show-text x="1024" y="900" frontColor="#FF0000FF" borderColor="#FFFFFFFF" uri="">Aún no ha terminado la clase.</show-text>
+          <condition>
+            <inactive flag="claseOrganicoFin" />
+          </condition>
+        </not-effect>
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="ProfOrganico" x="1021" y="582" scale="0.38" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
+    <atrezzo>
+      <atrezzo-ref idTarget="FondoOrganico" x="1024" y="900" scale="1" layer="0" />
+    </atrezzo>
+  </scene>
+  <scene id="ClasePapel" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/cole-aula - reverse.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="120" y="168" width="128" height="516" hasInfluenceArea="no" idTarget="PasilloPlanta2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="4" transitionTime="750" not-effects="yes">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <play-sound uri="assets/audio/abrirPuerta.mp3" />
+          <condition />
+        </effect>
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 2</show-text>
+          <condition />
+          <trigger-conversation idTarget="Pasillo2Dialogo" />
+          <condition>
+            <inactive flag="eventoPasillo2Fin" />
+          </condition>
+          <activate flag="eventoPasillo2Fin" />
+          <condition>
+            <inactive flag="eventoPasillo2Fin" />
+          </condition>
+        </post-effect>
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="ProfPapel" x="964" y="570" scale="0.19" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
+    <atrezzo>
+      <atrezzo-ref idTarget="FondoPapel" x="1024" y="900" scale="1" layer="0" />
+    </atrezzo>
+  </scene>
+  <scene id="ClaseVidrio" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/cole-aula.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1803" y="179" width="128" height="493" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="3" transitionTime="750" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <effect>
+          <play-sound uri="assets/audio/abrirPuerta.mp3" />
+          <condition />
+        </effect>
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 1</show-text>
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="ProfVidrio" x="821" y="574" scale="0.19" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
+    <atrezzo>
+      <atrezzo-ref idTarget="FondoVidrio" x="1024" y="900" scale="1" layer="0" />
+    </atrezzo>
+  </scene>
+  <scene id="ClasePlástico" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/cole-aula - reverse.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="116" y="176" width="140" height="492" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="4" transitionTime="750" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <play-sound uri="assets/audio/abrirPuerta.mp3" />
+          <condition />
+        </effect>
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 1</show-text>
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="ProfPlastico" x="1282" y="586" scale="0.19" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
+    <atrezzo>
+      <atrezzo-ref idTarget="FondoPlastico" x="1024" y="900" scale="1" layer="0" />
+    </atrezzo>
+  </scene>
+  <scene id="Patio" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/cole-patio.png" />
+      <asset type="bgmusic" uri="assets/audio/patio.mp3" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="-26" y="-10" width="192" height="929" hasInfluenceArea="no" idTarget="PasilloPlanta0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="5" transitionTime="750" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 0</show-text>
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
+    <objects>
+      <object-ref idTarget="PapelHigienico" x="292" y="755" scale="1" layer="11" hasInfluenceArea="no" />
+      <object-ref idTarget="LataRefresco" x="368" y="551" scale="1" layer="10" hasInfluenceArea="no" />
+      <object-ref idTarget="AvionPapel" x="1678" y="871" scale="1" layer="9" hasInfluenceArea="no" />
+      <object-ref idTarget="Revista" x="768" y="899" scale="1" layer="8" hasInfluenceArea="no" />
+      <object-ref idTarget="Platano" x="1268" y="828" scale="1" layer="7" hasInfluenceArea="no" />
+      <object-ref idTarget="EspinaPescado" x="1623" y="739" scale="1" layer="6" hasInfluenceArea="no" />
+      <object-ref idTarget="BolsaPatatas" x="1918" y="891" scale="1" layer="5" hasInfluenceArea="no" />
+    </objects>
+    <characters>
+      <character-ref idTarget="ContenedorMarron" x="631" y="570" scale="0.8" orientation="2" layer="3" hasInfluenceArea="no" />
+      <character-ref idTarget="ContenedorAzul" x="1789" y="570" scale="0.8" orientation="2" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="ContenedorVerde" x="980" y="570" scale="0.8" orientation="2" layer="1" hasInfluenceArea="no" />
+      <character-ref idTarget="ContenedorAmarillo" x="1352" y="574" scale="0.8" orientation="2" layer="0" hasInfluenceArea="no" />
+      <character-ref idTarget="ChicaPatio" x="499" y="843" scale="0.7732744" orientation="2" layer="4" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="PasilloPlanta0" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/cole-pasillo.png" />
+      <asset type="bgmusic" uri="assets/audio/pasillo.mp3" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1905" y="155" width="144" height="554" hasInfluenceArea="no" idTarget="Patio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="5" transitionTime="750" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="4" y="136" width="128" height="576" hasInfluenceArea="no" idTarget="Cafetería" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="4" transitionTime="750" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+      <exit rectangular="yes" x="822" y="20" width="364" height="494" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="1" transitionTime="750" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 1</show-text>
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
+    <objects>
+      <object-ref idTarget="BrickZumo" x="1316" y="586" scale="0.1157431" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="BotellaAlcohol" x="208" y="1004" scale="0.09878409" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="Probeta" x="1582" y="1006" scale="0.1086961" layer="1" hasInfluenceArea="no" />
+      <object-ref idTarget="CartelSueloMojado" x="635" y="490" scale="0.158211" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="CartelSueloMojado" x="1414" y="490" scale="0.158211" layer="0" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <scene id="PasilloPlanta1" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/cole-pasillo.png" />
+      <asset type="bgmusic" uri="assets/audio/pasillo.mp3" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="2" y="148" width="124" height="552" hasInfluenceArea="no" idTarget="ClaseVidrio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="4" transitionTime="750" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <effect>
+          <play-sound uri="assets/audio/cerrarPuerta.mp3" />
+          <condition />
+        </effect>
+      </exit>
+      <exit rectangular="yes" x="1908" y="148" width="140" height="554" hasInfluenceArea="no" idTarget="ClasePlástico" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="3" transitionTime="750" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <effect>
+          <play-sound uri="assets/audio/cerrarPuerta.mp3" />
+          <condition />
+          <play-sound uri="assets/audio/escribirPizarra.mp3" />
+          <condition>
+            <inactive flag="profPlasticoDialogo1Fin" />
+          </condition>
+        </effect>
+        <post-effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition>
+            <inactive flag="profPlasticoDialogo1Fin" />
+          </condition>
+          <trigger-conversation idTarget="ProfPlasticoDialogo1" />
+          <condition>
+            <inactive flag="profPlasticoDialogo1Fin" />
+          </condition>
+          <activate flag="profPlasticoDialogo1Fin" />
+          <condition />
+          <activate flag="conversacionInactiva" />
+          <condition />
+        </post-effect>
+      </exit>
+      <exit rectangular="yes" x="524" y="334" width="184" height="148" hasInfluenceArea="no" idTarget="PasilloPlanta0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="2" transitionTime="750" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 0</show-text>
+          <condition />
+        </post-effect>
+      </exit>
+      <exit rectangular="yes" x="1311" y="332" width="184" height="148" hasInfluenceArea="no" idTarget="PasilloPlanta0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="2" transitionTime="750" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 0</show-text>
+          <condition />
+        </post-effect>
+      </exit>
+      <exit rectangular="yes" x="828" y="44" width="363" height="468" hasInfluenceArea="no" idTarget="PasilloPlanta2" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="1" transitionTime="750" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 2</show-text>
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
+    <objects>
+      <object-ref idTarget="Potito" x="606" y="1014" scale="0.153276" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="BolaPapel" x="1728" y="941" scale="0.2184981" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="Periodico" x="841" y="594" scale="0.1698908" layer="0" hasInfluenceArea="no" />
+    </objects>
+    <characters>
+      <character-ref idTarget="ChicoPasillo" x="315" y="754" scale="0.5706471" orientation="2" layer="2" hasInfluenceArea="no" />
+      <character-ref idTarget="ChicaPasillo" x="521" y="770" scale="0.8102924" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="PasilloPlanta2" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/cole-pasillo.png" />
+      <asset type="bgmusic" uri="assets/audio/pasillo.mp3" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="0" y="148" width="132" height="559" hasInfluenceArea="no" idTarget="ClaseOrgánico" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="4" transitionTime="750" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <effect>
+          <play-sound uri="assets/audio/cerrarPuerta.mp3" />
+          <condition />
+        </effect>
+      </exit>
+      <exit rectangular="yes" x="1916" y="148" width="132" height="548" hasInfluenceArea="no" idTarget="ClasePapel" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="3" transitionTime="750" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <effect>
+          <play-sound uri="assets/audio/cerrarPuerta.mp3" />
+          <condition />
+          <play-sound uri="assets/audio/escribirPizarra.mp3" />
+          <condition>
+            <inactive flag="profPapelDialogo1Fin" />
+          </condition>
+        </effect>
+        <post-effect>
+          <deactivate flag="conversacionInactiva" />
+          <condition>
+            <inactive flag="profPapelDialogo1Fin" />
+          </condition>
+          <trigger-conversation idTarget="ProfPapelDialogo1" />
+          <condition>
+            <inactive flag="profPapelDialogo1Fin" />
+          </condition>
+          <activate flag="conversacionInactiva" />
+          <condition />
+          <activate flag="profPapelDialogo1Fin" />
+          <condition />
+        </post-effect>
+      </exit>
+      <exit rectangular="yes" x="1319" y="340" width="188" height="144" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="2" transitionTime="750" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 1</show-text>
+          <condition />
+        </post-effect>
+      </exit>
+      <exit rectangular="yes" x="524" y="340" width="188" height="144" hasInfluenceArea="no" idTarget="PasilloPlanta1" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="2" transitionTime="750" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 1</show-text>
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
+    <objects>
+      <object-ref idTarget="CartelSueloMojado" x="1000" y="156" scale="0.1525435" layer="0" hasInfluenceArea="no" />
+    </objects>
+  </scene>
+  <scene id="Cafetería" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/burger.png" />
+      <asset type="bgmusic" uri="assets/audio/cafeteria.mp3" />
+      <asset type="foreground" uri="" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1888" y="4" width="156" height="901" hasInfluenceArea="no" idTarget="PasilloPlanta0" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="3" transitionTime="750" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <show-text x="585" y="800" frontColor="#000000FF" borderColor="#FFFFFFFF" uri="">Planta 0</show-text>
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
+    <objects>
+      <object-ref idTarget="BotellaCola" x="244" y="361" scale="1" layer="7" hasInfluenceArea="no" />
+      <object-ref idTarget="CajaGalletas" x="1760" y="417" scale="1" layer="6" hasInfluenceArea="no" />
+      <object-ref idTarget="Galletas" x="1608" y="641" scale="1" layer="5" hasInfluenceArea="no" />
+      <object-ref idTarget="Tarro" x="1176" y="693" scale="1" layer="4" hasInfluenceArea="no" />
+      <object-ref idTarget="BrickLeche" x="952" y="705" scale="1" layer="3" hasInfluenceArea="no" />
+      <object-ref idTarget="Bocadillo" x="246" y="889" scale="1" layer="2" hasInfluenceArea="no" />
+      <object-ref idTarget="BotellaAgua" x="756" y="417" scale="1" layer="0" hasInfluenceArea="no" />
+    </objects>
+    <characters>
+      <character-ref idTarget="ChicoCafeteria" x="529" y="651" scale="0.607201" orientation="2" layer="1" hasInfluenceArea="no" />
+    </characters>
+  </scene>
+  <scene id="Menu" start="yes" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/menu-principal.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="1580" y="564" width="200" height="200" hasInfluenceArea="no" idTarget="EmpiezaColegio" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="5" transitionTime="750" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+        <post-effect>
+          <play-sound background="no" uri="assets/audio/escribirPizarra.mp3" />
+          <condition />
+          <trigger-conversation idTarget="ProfOrganicoDialogo1" />
+          <condition />
+          <activate flag="profOrganicoDialogo1Fin" />
+          <condition />
+        </post-effect>
+      </exit>
+    </exits>
+    <atrezzo>
+      <atrezzo-ref idTarget="BotonPlay" x="960" y="1080" scale="1" layer="0" />
+    </atrezzo>
+  </scene>
+  <scene id="NotasFinales" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/notaFinal.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="8" y="18" width="1896" height="1056" hasInfluenceArea="no" idTarget="Creditos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+    <characters>
+      <character-ref idTarget="ProfOrganico" x="956" y="-87" scale="0.872093" orientation="2" layer="0" hasInfluenceArea="no" />
+    </characters>
+    <atrezzo>
+      <atrezzo-ref idTarget="Nota-a" x="1320" y="415" scale="0.35" layer="10">
+        <condition>
+          <greater-than var="objetosRecogidos" value="32" />
+          <less-equals-than var="objetosRecogidos" value="36" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Nota-a+" x="1320" y="415" scale="0.35" layer="9">
+        <condition>
+          <greater-than var="objetosRecogidos" value="32" />
+          <less-equals-than var="objetosRecogidos" value="36" />
+          <greater-equals-than var="eventosHechos" value="4" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Nota-a++" x="1320" y="415" scale="0.35" layer="8">
+        <condition>
+          <greater-than var="objetosRecogidos" value="36" />
+          <greater-than var="eventosHechos" value="4" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Nota-b" x="1320" y="415" scale="0.35" layer="7">
+        <condition>
+          <greater-than var="objetosRecogidos" value="28" />
+          <less-equals-than var="objetosRecogidos" value="32" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Nota-b+" x="1320" y="415" scale="0.35" layer="6">
+        <condition>
+          <greater-than var="objetosRecogidos" value="28" />
+          <less-equals-than var="objetosRecogidos" value="32" />
+          <greater-equals-than var="eventosHechos" value="4" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Nota-c" x="1320" y="415" scale="0.35" layer="5">
+        <condition>
+          <greater-than var="objetosRecogidos" value="24" />
+          <less-equals-than var="objetosRecogidos" value="28" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Nota-c+" x="1320" y="415" scale="0.35" layer="4">
+        <condition>
+          <greater-than var="objetosRecogidos" value="24" />
+          <less-equals-than var="objetosRecogidos" value="28" />
+          <greater-equals-than var="eventosHechos" value="4" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Nota-d" x="1320" y="415" scale="0.35" layer="3">
+        <condition>
+          <greater-than var="eventosHechos" value="20" />
+          <less-equals-than var="eventosHechos" value="24" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Nota-d+" x="1320" y="415" scale="0.35" layer="2">
+        <condition>
+          <greater-than var="objetosRecogidos" value="20" />
+          <less-equals-than var="objetosRecogidos" value="24" />
+          <greater-equals-than var="eventosHechos" value="4" />
+        </condition>
+      </atrezzo-ref>
+      <atrezzo-ref idTarget="Nota-f" x="1320" y="415" scale="0.35" layer="1">
+        <condition>
+          <less-equals-than var="objetosRecogidos" value="20" />
+        </condition>
+      </atrezzo-ref>
+    </atrezzo>
+  </scene>
+  <scene id="Creditos" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/creditos.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="21" y="19" width="1882" height="1034" hasInfluenceArea="no" idTarget="Recursos" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" cursor-path="" sound-path="" />
+      </exit>
+    </exits>
+  </scene>
+  <scene id="Recursos" start="no" playerLayer="-1" playerScale="1" class="accesible" type="area">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="background" uri="assets/background/recursos.png" />
+    </resources>
+    <name>
+    </name>
+    <default-initial-position x="400" y="450" />
+    <exits>
+      <exit rectangular="yes" x="14" y="14" width="1895" height="1046" hasInfluenceArea="no" idTarget="Menu" destinyY="-2147483648" destinyX="-2147483648" destinyScale="1" transitionType="0" transitionTime="0" not-effects="no">
+        <exit-look text="" />
+      </exit>
+    </exits>
+  </scene>
+  <object id="Bocadillo" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/bocadillo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Bocadillo</name>
+      <brief>Es un bocadillo en mal estado...</brief>
+      <detailed>Es un bocadillo en mal estado...</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="Bocadillo" />
+          <condition />
+          <generate-object idTarget="Bocadillo" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Bocadillo" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Bocadillo" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Bocadillo" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Bocadillo" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="EspinaPescado" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/espina-pescado.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Espina de pescado</name>
+      <brief>Una espina de pescado!</brief>
+      <detailed>Una espina de pescado!</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="EspinaPescado" />
+          <condition />
+          <generate-object idTarget="EspinaPescado" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="EspinaPescado" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="EspinaPescado" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="EspinaPescado" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="EspinaPescado" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="Galletas" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/galletas.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Galletas</name>
+      <brief>Galletas del suelo... no se pueden comer ya</brief>
+      <detailed>Galletas del suelo... no se pueden comer ya</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="Galletas" />
+          <condition />
+          <generate-object idTarget="Galletas" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Galletas" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#0FF00FFF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Galletas" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Galletas" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Galletas" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="PapelHigienico" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/papel-higienico.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Papel higiénico</name>
+      <brief>Papel higiénico sucio... </brief>
+      <detailed>Papel higiénico sucio...</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="PapelHigienico" />
+          <condition />
+          <generate-object idTarget="PapelHigienico" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="PapelHigienico" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="PapelHigienico" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="PapelHigienico" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="PapelHigienico" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="Platano" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/platano.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Cascara de plátano</name>
+      <brief>Es solo la cáscara de un plátano</brief>
+      <detailed>Es solo la cáscara de un plátano</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="Platano" />
+          <condition />
+          <generate-object idTarget="Platano" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Platano" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Platano" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Platano" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profOrganicoDialogo2Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Platano" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="AvionPapel" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/avion-papel.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Avión de papel</name>
+      <brief>Un avión de papel</brief>
+      <detailed>Un avión de papel</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="AvionPapel" />
+          <condition />
+          <generate-object idTarget="AvionPapel" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="AvionPapel" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="AvionPapel" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="AvionPapel" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="AvionPapel" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="BolaPapel" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/bola-papel.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Bola de papel</name>
+      <brief>Una hoja de apuntes hecha bola</brief>
+      <detailed>Una hoja de apuntes hecha bola</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="BolaPapel" />
+          <condition />
+          <generate-object idTarget="BolaPapel" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="585" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BolaPapel" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BolaPapel" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BolaPapel" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BolaPapel" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="CajaGalletas" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/caja-galletas.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Caja de galletas</name>
+      <brief>Una caja de galletas vacía</brief>
+      <detailed>Una caja de galletas vacía</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="CajaGalletas" />
+          <condition />
+          <generate-object idTarget="CajaGalletas" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="CajaGalletas" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="CajaGalletas" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="CajaGalletas" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="CajaGalletas" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="Periodico" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/periodico.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Periódico</name>
+      <brief>Parece que no es de nadie este periódico</brief>
+      <detailed>Parece que no es de nadie este periódico</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="Periodico" />
+          <condition />
+          <generate-object idTarget="Periodico" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Periodico" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Periodico" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Periodico" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Periodico" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="Revista" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/revista.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Revista</name>
+      <brief>Han tirado una revista al suelo...</brief>
+      <detailed>Han tirado una revista al suelo...</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="Revista" />
+          <condition />
+          <generate-object idTarget="Revista" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Revista" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Revista" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Revista" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPapelDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Revista" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="BolsaPatatas" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/bolsa-patatas.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Bolsa de patatas</name>
+      <brief>Que pena... no quedan patatas</brief>
+      <detailed>Que pena... no quedan patatas</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="BolsaPatatas" />
+          <condition />
+          <generate-object idTarget="BolsaPatatas" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BolsaPatatas" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BolsaPatatas" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BolsaPatatas" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BolsaPatatas" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="BotellaAgua" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/botella-agua.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Botella de agua</name>
+      <brief>Está vacía...</brief>
+      <detailed>Está vacía...</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="BotellaAgua" />
+          <condition />
+          <generate-object idTarget="BotellaAgua" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaAgua" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaAgua" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaAgua" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaAgua" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="BrickLeche" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/brick-leche.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Brick de leche</name>
+      <brief>Es un brick de leche... sin leche</brief>
+      <detailed>Es un brick de leche... sin leche</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="BrickLeche" />
+          <condition />
+          <generate-object idTarget="BrickLeche" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BrickLeche" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BrickLeche" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BrickLeche" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BrickLeche" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="BrickZumo" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/brick-zumo.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Brick de zumo</name>
+      <brief>No han dejado ni una gota de zumo</brief>
+      <detailed>No han dejado ni una gota de zumo</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="BrickZumo" />
+          <condition />
+          <generate-object idTarget="BrickZumo" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BrickZumo" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BrickZumo" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BrickZumo" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BrickZumo" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="LataRefresco" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/lata-refresco.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Lata de refresco</name>
+      <brief>Esta lata está vacía</brief>
+      <detailed>Esta lata está vacía</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="LataRefresco" />
+          <condition />
+          <generate-object idTarget="LataRefresco" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="LataRefresco" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="LataRefresco" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="LataRefresco" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profPlasticoDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="LataRefresco" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="BotellaAlcohol" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/botella-alcohol.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Botella de alcohol</name>
+      <brief>No creo que esta botella sea de un niño</brief>
+      <detailed>No creo que esta botella sea de un niño</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="BotellaAlcohol" />
+          <condition />
+          <generate-object idTarget="BotellaAlcohol" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaAlcohol" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaAlcohol" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaAlcohol" />
+          <condition />
+          <increment var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaAlcohol" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="BotellaCola" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/botella-cola.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Botella Cola</name>
+      <brief>No queda ni un poco de Cola</brief>
+      <detailed>No queda ni un poco de Cola</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="BotellaCola" />
+          <condition />
+          <generate-object idTarget="BotellaCola" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaCola" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaCola" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaCola" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="BotellaCola" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="Potito" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/potito.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Potito</name>
+      <brief>Parece de un potito de frutas</brief>
+      <detailed>Parece de un potito de frutas</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="Potito" />
+          <condition />
+          <generate-object idTarget="Potito" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Potito" />
+          <condition />
+          <increment var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Potito" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Potito" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Potito" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="Probeta" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/probeta.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Probeta</name>
+      <brief>Será que ya no se necesita en clase...</brief>
+      <detailed>Será que ya no se necesita en clase...</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="Probeta" />
+          <condition />
+          <generate-object idTarget="Probeta" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Probeta" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Probeta" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Probeta" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Probeta" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="Tarro" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/tarro.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Tarro</name>
+      <brief>Qué habría antes en este tarro?</brief>
+      <detailed>Qué habría antes en este tarro?</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+      <grab needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <remove-element idTarget="Tarro" />
+          <condition />
+          <generate-object idTarget="Tarro" />
+          <condition />
+        </effect>
+      </grab>
+      <give-to idTarget="ContenedorVerde" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Tarro" />
+          <condition />
+          <increment var="objetosRecogidos" value="2" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAmarillo" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Tarro" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorAzul" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Tarro" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+      <give-to idTarget="ContenedorMarron" needsGoTo="yes" keepDistance="35" not-effects="no">
+        <condition>
+          <active flag="profVidrioDialogo1Fin" />
+        </condition>
+        <effect>
+          <consume-object idTarget="Tarro" />
+          <condition />
+          <decrement var="objetosRecogidos" value="1" />
+          <condition />
+          <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </give-to>
+    </actions>
+  </object>
+  <object id="CartelSueloMojado" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/suelo-mojado.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>Cartel suelo mojado</name>
+      <brief>Parece que no se puede pasar</brief>
+      <detailed>Parece que no se puede pasar</detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no" />
+    </actions>
+  </object>
+  <atrezzoobject id="FondoOrganico">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/cole-aula-organico.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="FondoVidrio">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/cole-aula-vidrio.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="FondoPapel">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/cole-aula-papel.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="FondoPlastico">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/cole-aula-plastico.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="BotonPlay">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/boton-de-jugar.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-a">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/a.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-a+">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/a+.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-a++">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/a++1.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-b">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/b.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-b+">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/b+.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-c">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/c.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-c+">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/c+.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-d">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/d.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-d+">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/d+.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <atrezzoobject id="Nota-f">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/f.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </atrezzoobject>
+  <graph-conversation id="ProfOrganicoDialogo1">
+    <dialogue-node nodeindex="0" editor-x="95" editor-y="136">
+      <speak-char idTarget="ProfOrganico">Bueno, como ya sabéis, hoy vamos a organizar un pequeño desafío de reciclaje antes de acabar las clases.</speak-char>
+      <condition />
+      <speak-player>¿Reciclaje? ¿Qué es eso?</speak-player>
+      <condition />
+      <speak-char idTarget="ProfOrganico">El reciclaje nos permite separar los residuos para después reutilizarlos, y así ayudar al cuidado de la tierra.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Por lo general, hay cuatro grandes grupos de residuos a tener en cuenta…</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">1. Residuos orgánicos.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">2. Papel y cartón.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">3. Envases de vidrio.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">4. Plásticos, briks y envases metálicos.</speak-char>
+      <condition />
+      <speak-player>¿Y no hay más grupos?</speak-player>
+      <condition />
+      <speak-char idTarget="ProfOrganico">¡Claro que sí! Hay deshechos que se deben depositar en los contenedores grises para restos en general</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Y también existen otros que deben ser entregados en contenedores especiales, o en un Punto Limpio.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Residuos como pilas gastadas, artículos de limpieza y medicamentos, aparatos electrónicos, metales y más que no pueden juntarse con los otros grupos.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Pero como esos no son muy comunes en una escuela, nosotros nos vamos a centrar en los  cuatro grupos principales.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">#! ¡Así que vamos a ello!</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Habla conmigo cuando quieras que empecemos.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ProfOrganicoDialogo2">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfOrganico">Como profesor de esta clase, mi labor es informaros sobre los RESTOS ORGANICOS.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">“Los restos orgánicos van en los contenedores marrones, y son la categoría más común a la hora de reciclar.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">De hecho, muchas personas tienden a introducir por error todo tipo de residuos no orgánicos en esta categoría.</speak-char>
+      <condition />
+      <speak-player>¿Como cuáles?</speak-player>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Como polvo, pelo, colillas, restos de cerámica, pañales y mucho más.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Se considera como restos orgánicos a los alimentos en general: pescados, carnes, frutas y verduras, y similares.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Aunque esos no son todos los residuos incluidos en esta categoría.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">¿Alguien tiene alguna duda al respecto?</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" showUserOption="yes" preListening="yes" editor-x="400" editor-y="114" x="400" y="114">
+      <speak-player>¿Puede repetir cuáles son los restos que van en este contenedor?</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>¿Qué pasa con las cáscaras de huevo, las pepitas de la fruta o los posos de las infusiones?</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>¿Se puede incluir el papel en esta categoría?</speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <speak-player>No tengo más preguntas.</speak-player>
+      <condition />
+      <child nodeindex="5" />
+      <speak-player>He terminado de recoger toda la basura.</speak-player>
+      <condition />
+      <child nodeindex="6" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1118" editor-y="12">
+      <speak-char idTarget="ProfOrganico">Se considera como restos orgánicos a los alimentos en general: pescados, carnes, frutas y verduras, y similares.</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1110" editor-y="203">
+      <speak-char idTarget="ProfOrganico">Las cáscaras de huevo, las pepitas, los posos y similares van incluidos en esta categoría.</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1117" editor-y="393">
+      <speak-char idTarget="ProfOrganico">Si se trata de elementos como servilletas o papel higiénico o de cocina que hayan sido usados, sí se pueden, y deben, incluir en este contenedor.</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="1128" editor-y="588">
+      <speak-char idTarget="ProfOrganico">Perfecto ¡pues vamos a ello!</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Recuerda que tienes que venir a verme cuando hayas terminado.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="591" editor-y="483">
+      <speak-char idTarget="ProfOrganico">¿Estás seguro de que no te has dejado nada por ahí?</speak-char>
+      <condition />
+      <child nodeindex="7" />
+    </dialogue-node>
+    <option-node nodeindex="7" showUserOption="yes" preListening="yes" editor-x="820" editor-y="700" x="820" y="700">
+      <speak-player>Si.</speak-player>
+      <condition />
+      <child nodeindex="8" />
+      <speak-player>No.</speak-player>
+      <condition />
+      <child nodeindex="9" />
+    </option-node>
+    <dialogue-node nodeindex="8" editor-x="1327" editor-y="787">
+      <speak-char idTarget="ProfOrganico">Entonces vamos a ver que has sacado.</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-scene idTarget="NotasFinales" x="960" y="810" transitionTime="750" transitionType="5" />
+          <condition />
+          <trigger-conversation idTarget="NotasDialogo" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="9" editor-x="1040" editor-y="894">
+      <speak-player>Pues vanga que el tiempo es oro.</speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ProfPapelDialogo1">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfPapel">Bienvenido a la clase azul. Azul por nuestro contenedor, claro.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfPapel">Mi papel es hablarte sobre los contenedores azules y su uso, sin trampa ni cartón.</speak-char>
+      <condition />
+      <speak-player>¿Sin trampa ni cartón?</speak-player>
+      <condition />
+      <speak-char idTarget="ProfPapel">Bueno, sin cartones no, claro. Los contenedores azules son para papel y cartón principalmente, aunque también incluyen algunos otros productos.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfPapel">Hablamos de folios y hojas, de cartones, de envases de alimentación, papel de regalo, calzado, papel de uso diario…</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" showUserOption="yes" preListening="yes" editor-x="586" editor-y="50" x="586" y="50">
+      <speak-player>¿Eso incluye pañuelos, servilletas y similares?</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>¿Puedo reciclar mis apuntes?</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>Entiendo.</speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1026" editor-y="50">
+      <speak-char idTarget="ProfPapel">Sí, siempre que no hayan sido usados. Si no, deben ir en el contenedor orgánico.</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1026" editor-y="244">
+      <speak-char idTarget="ProfPapel">Sí, si quieres reciclar la asignatura para repetir año.</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1026" editor-y="438">
+      <speak-char idTarget="ProfPapel">Así que ya sabes ¡A recoger papeles por ahí!</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ProfPapelDialogo2">
+    <option-node nodeindex="0" showUserOption="yes" preListening="yes" editor-x="50" editor-y="50" x="50" y="50">
+      <speak-player>Se me ha olvidado lo que iba en este contenedor. ¿Me lo puedes recordar?</speak-player>
+      <condition />
+      <child nodeindex="1" />
+      <speak-player>¿Los pañuelos, las servilletas y similares van aquí?</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>¿Puedo reciclar mis apuntes?</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>Entiendo.</speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="1" editor-x="619" editor-y="50">
+      <speak-char idTarget="ProfPapel">Los contenedores azules son para papel y cartón. Esto es, folios y hojas, cartones, envases de alimentación, papel de regalo, calzado, papel de uso diario…</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="619" editor-y="244">
+      <speak-char idTarget="ProfPapel">Sí, siempre que no hayan sido usados. Si no, deben ir en el contenedor orgánico.</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="619" editor-y="438">
+      <speak-char idTarget="ProfPapel">Sí, si quieres reciclar la asignatura para repetir año.</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="619" editor-y="632">
+      <speak-char idTarget="ProfPapel">Así que ya sabes ¡A recoger papeles por ahí!</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ProfVidrioDialogo1">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfVidrio">¿Vienes a informarte sobre los contenedores verdes?</speak-char>
+      <condition />
+      <speak-player>Así es.</speak-player>
+      <condition />
+      <speak-char idTarget="ProfVidrio">¡Genial! Pues mira, los contenedores verdes son los apropiados para reciclar los ENVASES DE VIDRIO</speak-char>
+      <condition />
+      <speak-char idTarget="ProfVidrio">Esto es, las botellas de vidrio, los frascos como los de perfume y los tarros para alimentos.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfVidrio">Pero OJO. Aquí solo valen los restos de vidrio, que no son los mismos que los de cristal.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfVidrio">¿Tienes alguna duda?</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" showUserOption="yes" preListening="yes" editor-x="662" editor-y="50" x="662" y="50">
+      <speak-player>¿Eso significa que no puedo tirar cosas de cristal a este contenedor?</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>El otro día se me ropieron las gafas y no sabía dónde tirarlas. ¿Van aquí?</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>Nada más. Todo claro, clarinete.</speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="882" editor-y="50">
+      <speak-char idTarget="ProfVidrio">Exacto. Los productos de cristal más típicos, como bombillas, espejos, vasos o ceniceros deben ser entregados a un punto limpio.</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="882" editor-y="244">
+      <speak-char idTarget="ProfVidrio">Las gafas son un caso especial, por la montura y porque las lentes no siempre son de vidrio. Lo apropiado es llevarlas a una óptica para que las aprovechen.</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="882" editor-y="438">
+      <speak-char idTarget="ProfVidrio">Pues ale, a recoger y reciclar.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ProfVidrioDialogo2">
+    <option-node nodeindex="0" showUserOption="yes" preListening="yes" editor-x="50" editor-y="50" x="50" y="50">
+      <speak-player>¿Puedes repetirme qué cosas van en los contenedores verdes?</speak-player>
+      <condition />
+      <child nodeindex="1" />
+      <speak-player>¿Las cosas de cristal también van aquí?</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>El otro día se me ropieron las gafas y no sabía dónde tirarlas ¿Van aquí?</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>Nada más. Todo claro, clarinete.</speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="1" editor-x="542" editor-y="50">
+      <speak-char idTarget="ProfVidrio">Las botellas de vidrio, los frascos como los de perfume y los tarros para alimentos.</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="542" editor-y="244">
+      <speak-char idTarget="ProfVidrio">No, ni mucho menos. Los productos de cristal más típicos, como bombillas, espejos, vasos o ceniceros deben ser entregados a un punto limpio</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="542" editor-y="438">
+      <speak-char idTarget="ProfVidrio">Las gafas son un caso especial, por la montura y porque las lentes no siempre son de vidrio. Lo apropiado es llevarlas a una óptica para que las aprovechen.</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="542" editor-y="632">
+      <speak-char idTarget="ProfVidrio">Pues ale, a recoger y reciclar.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ProfPlasticoDialogo1">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfPlastico">En esta clase nos encargamos del contenedor amarillo, uno de los contenedores más comunes pero que más problemas dan a la gente.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfPlastico">Lo usas todos los días, pero… ¿De verdad sabes todo lo que va dentro del contenedor amarillo?</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" showUserOption="yes" preListening="yes" editor-x="73" editor-y="355" x="73" y="355">
+      <speak-player>Pff… Por supuesto.</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>Pues claro que sí.</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>Eso creo…</speak-player>
+      <condition />
+      <child nodeindex="2" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="656" editor-y="372">
+      <speak-char idTarget="ProfPlastico">Pues probablemente no sea así. El contenedor amarillo está destinado para plásticos y envases, aunque no siempre es sencillo clasificar correctamente sus residuos.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfPlastico">Los más típicos son las botellas de plástico o las latas, aunque también se incluyen los envases de plástico como los de yogurt, el papel de aluminio…</speak-char>
+      <condition />
+      <speak-char idTarget="ProfPlastico">…las bandejas de corcho de los alimentos, las chapas metálicas de las botellas, tubos de pasta de dientes, botes de desodorante, aerosoles vacíos, y un largo etcétera.</speak-char>
+      <condition />
+      <child nodeindex="3" />
+    </dialogue-node>
+    <option-node nodeindex="3" showUserOption="yes" preListening="yes" editor-x="74" editor-y="792" x="74" y="792">
+      <speak-player>¿Esto incluye los briks o esos van con el cartón?</speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <speak-player>Entonces… ¿Todo lo que sea de plástico va aquí?</speak-player>
+      <condition />
+      <child nodeindex="5" />
+      <speak-player>¿Alguna excepción notable?</speak-player>
+      <condition />
+      <child nodeindex="6" />
+      <speak-player>Entendido.</speak-player>
+      <condition />
+      <child nodeindex="7" />
+    </option-node>
+    <dialogue-node nodeindex="4" editor-x="588" editor-y="669">
+      <speak-char idTarget="ProfPlastico">Por supuesto. Los briks van todos en este contenedor, y es de gran utilidad el doblarlos antes de introducirlos para ahorrar espacio.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="597" editor-y="903">
+      <speak-char idTarget="ProfPlastico">No, no. Ni mucho menos. Productos como juguetes de plástico, biberones y chupetes, utensilios de cocina o cubos de plástico deben ir al contenedor gris de restos.</speak-char>
+      <condition />
+      <child nodeindex="3" />
+    </dialogue-node>
+    <dialogue-node nodeindex="6" editor-x="596" editor-y="1164">
+      <speak-char idTarget="ProfPlastico">¿Alguna? ¡Muchísimas! El papel plastificado, los ‘tuppers’, las cápsulas de café, los termos, bolígrafos y sacapuntas, los mecheros…</speak-char>
+      <condition />
+      <speak-char idTarget="ProfPlastico">…las macetas de plástico, los envases de medicamentos, neceseres, fotografías, moldes de silicona para cocinar, y muchos, muchos productos más que no deben ir aquí.</speak-char>
+      <condition />
+      <child nodeindex="3" />
+    </dialogue-node>
+    <dialogue-node nodeindex="7" editor-x="294" editor-y="1379">
+      <speak-char idTarget="ProfPlastico">¿Seguro? Estoy aquí para cualquier duda que tengas.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ProfPlasticoDialogo2">
+    <option-node nodeindex="0" showUserOption="yes" preListening="yes" editor-x="50" editor-y="50" x="50" y="50">
+      <speak-player>Este contenedor era chunguillo ¿Me puedes recordar lo que iba en él?</speak-player>
+      <condition />
+      <child nodeindex="1" />
+      <speak-player>¿Los briks van aquí o en el de cartón?</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>¿Todo lo que sea de plástico va aquí?</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>¿Alguna excepción notable?</speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <speak-player>Entendido.</speak-player>
+      <condition />
+      <child nodeindex="5" />
+    </option-node>
+    <dialogue-node nodeindex="1" editor-x="756" editor-y="50">
+      <speak-char idTarget="ProfPlastico">El contenedor amarillo es para plásticos y envases. Cosas como las botellas de plástico, las latas, botes de plástico, papel de aluminio, tubos de pasta de dientes, aerosoles vacíos...</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="2" editor-x="756" editor-y="244">
+      <speak-char idTarget="ProfPlastico">Los briks van todos en este contenedor, y es de gran utilidad el doblarlos antes de introducirlos para ahorrar espacio.</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="756" editor-y="438">
+      <speak-char idTarget="ProfPlastico">No, no. Ni mucho menos. Productos como juguetes de plástico, biberones y chupetes, utensilios de cocina o cubos de plástico deben ir al contenedor gris de restos.</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="756" editor-y="632">
+      <speak-char idTarget="ProfPlastico">¿Alguna? ¡Muchísimas! El papel plastificado, los ‘tuppers’, las cápsulas de café, los termos, bolígrafos y sacapuntas, los mecheros…</speak-char>
+      <condition />
+      <speak-char idTarget="ProfPlastico">…las macetas de plástico, los envases de medicamentos, neceseres, fotografías, moldes de silicona para cocinar, y muchos, muchos productos más que no deben ir aquí.</speak-char>
+      <condition />
+      <child nodeindex="0" />
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="756" editor-y="826">
+      <speak-char idTarget="ProfPlastico">¿Seguro? Estoy aquí para cualquier duda que tengas.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="ChicoCafeteriaDialogo">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ChicoCafeteria">Acabo de encontrar un tupper lleno de comida, pero está en mal estado.</speak-char>
+      <condition />
+      <speak-char idTarget="ChicoCafeteria">¿Qué puedo hacer con ello?</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" showUserOption="yes" preListening="yes" editor-x="640" editor-y="50" x="640" y="50">
+      <speak-player>Tíralo todo al contenedor amarillo.</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>Separa los restos. Tira la comida al contenedor marrón y el tupper al amarillo.</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>La comida tírala al de orgánico. El tupper se puede aprovechar con una limpiadita.</speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1124" editor-y="50">
+      <speak-char idTarget="ChicoCafeteria">Eso no me inspira mucha confianza, pero si tú lo dices…</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <show-text x="585" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1124" editor-y="244">
+      <speak-char idTarget="ChicoCafeteria">Sí, eso me parece lo más lógico ¡Gracias!</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <increment var="eventosHechos" value="1" />
+          <condition />
+          <show-text x="585" y="800" frontColor="#FFB900FF" borderColor="#000000FF" uri="">CASI BIEN</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1124" editor-y="438">
+      <speak-char idTarget="ChicoCafeteria">¡Qué buena idea! Así la comida se convierte en compost y el tupper se reutiliza sin necesidad de reciclarlo.</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <increment var="eventosHechos" value="2" />
+          <condition />
+          <show-text x="585" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="PasilloDialogo">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ChicaPasillo">#! ¡Va a envases!</speak-char>
+      <condition />
+      <speak-char idTarget="ChicoPasillo">#! ¡No!¡Va en cartón!</speak-char>
+      <condition />
+      <speak-player>¿Tenéis algún problema?</speak-player>
+      <condition />
+      <speak-char idTarget="ChicaPasillo">Sí, he encontrado un brik de batido de chocolate, y creo que va en envases…</speak-char>
+      <condition />
+      <speak-char idTarget="ChicoPasillo">#! ¡EN CARTÓN!</speak-char>
+      <condition />
+      <speak-char idTarget="ChicaPasillo">... y el pesado de mi hermano dice que va en cartón, pero yo creo que no.</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" showUserOption="yes" preListening="yes" editor-x="453" editor-y="50" x="453" y="50">
+      <speak-player>Tu hermano tiene razón. Los briks van en el azul con el cartón.</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>Tienes razón tú, los briks van en el amarillo.</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>¿De batido? Eso va en orgánico porque está manchado ya.</speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1108" editor-y="50">
+      <speak-char idTarget="ChicoPasillo">¿Ves como siempre tengo razón?</speak-char>
+      <condition />
+      <speak-char idTarget="ChicaPasillo">Lo que no tienes es idea ¡Que los briks son envases! Al amarillo que va, digáis lo que digáis.</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <show-text x="585" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1107" editor-y="278">
+      <speak-char idTarget="ChicaPasillo">Por fin alguien con cabeza que sabe que los briks son envases ¡Gracias!</speak-char>
+      <condition />
+      <speak-char idTarget="ChicoPasillo">Venga, va. Os doy la razón.</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <increment var="eventosHechos" value="2" />
+          <condition />
+          <show-text x="585" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1101" editor-y="522">
+      <speak-char idTarget="ChicoPasillo">¿Orgánico? ¿Tú estás seguro de eso?.</speak-char>
+      <condition />
+      <speak-char idTarget="ChicaPasillo">Ni de lejos es orgánico. Pero bueno, que al amarillo que lo tiro digáis lo que digáis.</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <show-text x="585" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="PatioDialogo">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>¡Hola! ¿Tú también estás con el desafío del reciclaje?</speak-player>
+      <condition />
+      <speak-char idTarget="ChicaPatio">Sí, aunque ando algo perdida.</speak-char>
+      <condition />
+      <speak-char idTarget="ChicaPatio">Tengo aquí este vaso de cristal que se me ha roto, y no sé exáctamente dónde va.</speak-char>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" showUserOption="yes" preListening="yes" editor-x="401" editor-y="50" x="401" y="50">
+      <speak-player>Al de vidrio, claramente. Es el contenedor verde de ahí.</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>Eso va al de envases.</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>¿Tiene restos? Entonces va al orgánico.</speak-player>
+      <condition />
+      <child nodeindex="4" />
+      <speak-player>Eso va al punto limpio. Dáselo a algún profe.</speak-player>
+      <condition />
+      <child nodeindex="5" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="825" editor-y="50">
+      <speak-char idTarget="ChicaPatio">¡Cierto, donde las botellas! Aunque pensaba que aquí solo iba el vidrio...</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <show-text x="585" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="825" editor-y="244">
+      <speak-char idTarget="ChicaPatio">¿Estás seguro? Bueno, yo lo tiro al verde que me suena más.</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <show-text x="585" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="825" editor-y="438">
+      <speak-char idTarget="ChicaPatio">Buf. Andas tú peor que yo ¿eh? Creo que lo voy a llevar luego al punto limpio.</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <show-text x="585" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="5" editor-x="825" editor-y="632">
+      <speak-char idTarget="ChicaPatio">¡Anda, claro! Que el cristal se tira aparte ¡Muchas gracias!</speak-char>
+      <condition />
+      <end-conversation>
+        <effect>
+          <increment var="eventosHechos" value="2" />
+          <condition />
+          <show-text x="585" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Pasillo2Dialogo">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>#O Sales de la clase y ves cómo un alumno tira al suelo el envoltorio de una chocolatina. ¿Qué harás?</speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" showUserOption="yes" preListening="yes" editor-x="641" editor-y="50" x="641" y="50">
+      <speak-player>Es su responsabilidad, no la mía (pasar).</speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>Llamarle la atención (confrontar).</speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>Recogerlo yo mismo (limpiar).</speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="1102" editor-y="50">
+      <speak-player>#O Pasas de largo sin hacer nada. Es problema de otro ¿O no?</speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <show-text x="585" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">MAL</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="1102" editor-y="244">
+      <speak-player>¡Eh, figura! Se te ha caído algo.</speak-player>
+      <condition />
+      <speak-player>#O El chico se da la vuelta y recoge el envoltorio mientras se disculpa algo avergonzado.</speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <increment var="eventosHechos" value="2" />
+          <condition />
+          <show-text x="585" y="800" frontColor="#00FF00FF" borderColor="#000000FF" uri="">BIEN</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="1102" editor-y="438">
+      <speak-player>#O Te agachas y recoges tú mismo el envoltorio, aunque de poco sirve si ese otro chico no ha aprendido a no ensuciar.</speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <increment var="eventosHechos" value="1" />
+          <condition />
+          <show-text x="585" y="800" frontColor="#FFB900FF" borderColor="#000000FF" uri="">CASI BIEN</show-text>
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="NotasDialogo">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>A ver...</speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <trigger-conversation idTarget="NotasFD" />
+          <condition>
+            <less-equals-than var="objetosRecogidos" value="24" />
+          </condition>
+          <trigger-conversation idTarget="NotasC" />
+          <condition>
+            <greater-than var="objetosRecogidos" value="24" />
+            <less-equals-than var="objetosRecogidos" value="28" />
+          </condition>
+          <trigger-conversation idTarget="NotasB" />
+          <condition>
+            <greater-than var="objetosRecogidos" value="28" />
+            <less-equals-than var="objetosRecogidos" value="32" />
+          </condition>
+          <trigger-conversation idTarget="NotasA" />
+          <condition>
+            <greater-than var="objetosRecogidos" value="32" />
+            <less-equals-than var="objetosRecogidos" value="36" />
+          </condition>
+          <trigger-conversation idTarget="NotasA++" />
+          <condition>
+            <greater-than var="objetosRecogidos" value="36" />
+          </condition>
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="NotasFD">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfOrganico">Vaya, veo que te falta mucho por aprender.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Cuidar del medio ambiente es tarea de todos, y si quieres ayudar al futuro de nuestro planeta, tendrás que hacerlo mucho mejor.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Vuelve a intentarlo la próxima vez.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="NotasC">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfOrganico">Veo que sabes algunas cosas, aunque todavía puedes hacerlo mucho mejor.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Dale un repaso a todo lo que te hemos enseñado hoy, y seguro que la próxima vez lo haces mejor.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">¡Muy bien! Veo que has entendido cómo funciona el reciclaje y el uso de cada contenedor.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="NotasB">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfOrganico">¡Muy bien! Veo que has entendido cómo funciona el reciclaje y el uso de cada contenedor.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Aunque todavía se te resisten algunos de los objetos más complicados de clasificar, pero muy bien hecho.</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="NotasA">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfOrganico">¡Genial! Eres todo un fiera en esto del reciclaje.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Has aprendido a clasificar los deshechos y a depositarlos correctamente, para hacer de nuestro mundo un lugar más limpio y mejor en el que vivir.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">¡Enhorabuena!</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="NotasA++">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-char idTarget="ProfOrganico">¡Increíble! No solo has acertado de lleno con todos los deshechos, sino que también has sabido ayudar a otras personas.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">Poco más hay que se te pueda enseñar en esto del reciclaje.</speak-char>
+      <condition />
+      <speak-char idTarget="ProfOrganico">¡Así que gracias por cuidar del medio ambiente!</speak-char>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <slidescene id="EmpiezaColegio" start="no" idTarget="ClaseOrgánico" destinyX="-2147483648" destinyY="-2147483648" transitionTime="750" transitionType="5" next="new-scene" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <resources name="No name">
+      <asset type="slides" uri="assets/animation/CutsceneEmpiezaColegio.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <slidescene id="FinTutorial" start="no" next="go-back" class="accesible" type="cutscene">
+    <documentation>
+    </documentation>
+    <effect>
+      <activate flag="finTutorial" />
+      <condition />
+      <activate flag="conversacionInactiva" />
+      <condition />
+    </effect>
+    <resources name="No name">
+      <asset type="slides" uri="assets/animation/finTutorial.eaa.xml" />
+    </resources>
+    <name>
+    </name>
+  </slidescene>
+  <timer time="900" usesEndCondition="yes" multipleStarts="yes" runsInLoop="no" showTime="yes" displayName="Tiempo" countDown="yes" showWhenStopped="no">
+    <init-condition>
+      <active flag="conversacionInactiva" />
+    </init-condition>
+    <end-condition>
+      <inactive flag="conversacionInactiva" />
+    </end-condition>
+    <effect>
+      <deactivate flag="conversacionInactiva" />
+      <condition />
+      <play-sound uri="assets/audio/timbre.mp3" />
+      <condition>
+        <inactive flag="timerFin" />
+      </condition>
+      <show-text x="800" y="800" frontColor="#FF0000FF" borderColor="#000000FF" uri="">Se acabó el tiempo.</show-text>
+      <condition>
+        <inactive flag="timerFin" />
+      </condition>
+      <trigger-scene idTarget="NotasFinales" x="960" y="810" transitionTime="750" transitionType="5" />
+      <condition>
+        <inactive flag="timerFin" />
+      </condition>
+      <trigger-conversation idTarget="NotasDialogo" />
+      <condition>
+        <inactive flag="timerFin" />
+      </condition>
+      <activate flag="timerFin" />
+      <condition />
+    </effect>
+  </timer>
+</eAdventure>

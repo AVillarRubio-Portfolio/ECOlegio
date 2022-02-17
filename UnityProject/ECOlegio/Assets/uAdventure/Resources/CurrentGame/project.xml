@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment> Project Configuration </comment>
+<entry key="Chapter0.ClaseVidrio.X">0</entry>
+<entry key="Chapter0.ClaseVidrio.Y">369</entry>
+<entry key="Chapter0.ClaseOrgánico.X">523</entry>
+<entry key="Chapter0.ClaseOrgánico.Y">62</entry>
+<entry key="Chapter0.ClasePapel.X">348</entry>
+<entry key="Chapter0.ClasePapel.Y">241</entry>
+<entry key="Chapter0.ClasePlástico.X">356</entry>
+<entry key="Chapter0.ClasePlástico.Y">101</entry>
+<entry key="Chapter0.PasilloPlanta0.X">-19</entry>
+<entry key="Chapter0.PasilloPlanta0.Y">101</entry>
+<entry key="Chapter0.PasilloPlanta1.X">153</entry>
+<entry key="Chapter0.PasilloPlanta1.Y">234</entry>
+<entry key="Chapter0.PasilloPlanta2.X">194</entry>
+<entry key="Chapter0.PasilloPlanta2.Y">109</entry>
+<entry key="Chapter0.Patio.X">145</entry>
+<entry key="Chapter0.Patio.Y">106</entry>
+<entry key="Chapter0.Cafetería.X">355</entry>
+<entry key="Chapter0.Cafetería.Y">266</entry>
+<entry key="Chapter0.Menu.X">204</entry>
+<entry key="Chapter0.Menu.Y">200</entry>
+<entry key="Chapter0.NotasFinales.X">630</entry>
+<entry key="Chapter0.NotasFinales.Y">96</entry>
+<entry key="Chapter0.Creditos.X">791</entry>
+<entry key="Chapter0.Creditos.Y">248</entry>
+<entry key="Chapter0.Recursos.X">500</entry>
+<entry key="Chapter0.Recursos.Y">479</entry>
+</properties>
